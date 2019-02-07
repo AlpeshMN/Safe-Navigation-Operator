@@ -1,0 +1,27 @@
+
+  <!-- Template reference variable example -->
+
+<!-- <div>
+  <label for="">First name:</label><input type="text" name="" value="" #firstName> <br><br>
+  <label for="">Last name:</label><input type="text" name="" value="" #lastName> <br><br>
+
+  <button type="button" name="button" (click)="spanOutput.innerText = firstName.value +' '+ lastName.value">Set name</button>
+
+  <span #spanOutput></span>
+</div> -->
+
+
+<!-- Safe Navigation Operator... ('?') -->
+
+<!-- It will not show below error on using ? operator  -->
+<!-- AppComponent.html:11 ERROR TypeError: Cannot read property 'FirstName' of undefined -->
+
+<!-- {{person.Name?.FirstName}}
+{{person.Name.LastName}}
+ -->
+
+<div *ngFor="let post of posts">
+    Title: {{post.title}} <br><br>
+    by {{post.user?.name}}<br><br>
+    {{post.body}}<br><br>
+</div>
